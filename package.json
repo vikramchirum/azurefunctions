@@ -1,0 +1,24 @@
+{
+  "name": "gexa.serverless.functions",
+  "version": "1.0.0",
+  "license": "MIT",
+  "scripts": {
+    "patch": "npm version patch",
+    "minor": "npm version minor",
+    "major": "npm version major",
+    "push": "git push && git push --tags",
+    "git-update": "git remote update --prune"
+  },
+  "private": true,
+  "devDependencies": {
+    "@octopusdeploy/grunt-octo": "0.0.50",
+    "grunt": "^1.0.1",
+    "grunt-cli": "^1.2.0",
+    "grunt-contrib-clean": "^1.1.0",
+    "grunt-dotnet-assembly-info": "^1.0.19",
+    "grunt-msbuild": "^0.4.4",
+    "grunt-mstest": "^0.1.6",
+    "grunt-nuget": "^0.3.0",
+    "load-grunt-tasks": "^3.5.2"
+  }
+}
