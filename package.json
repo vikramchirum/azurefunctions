@@ -11,16 +11,13 @@
   },
   "private": true,
   "devDependencies": {
-    "jsonwebtoken": "^8.5.1",
-    "monk": "^6.0.6",
     "@octopusdeploy/grunt-octo": "0.0.50",
-    "grunt": "^1.0.1",
+    "grunt": "^1.0.4",
     "grunt-cli": "^1.2.0",
     "grunt-contrib-clean": "^1.1.0",
-    "grunt-dotnet-assembly-info": "^1.0.19",
-    "grunt-msbuild": "^0.4.4",
-    "grunt-mstest": "^0.1.6",
-    "grunt-nuget": "^0.3.0",
-    "load-grunt-tasks": "^3.5.2"
+    "grunt-gitinfo": "^0.1.8",
+    "jsonwebtoken": "^8.5.1",
+    "load-grunt-tasks": "^3.5.2",
+    "monk": "^6.0.6"
   }
 }
