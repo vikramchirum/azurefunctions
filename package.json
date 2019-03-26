@@ -11,6 +11,8 @@
   },
   "private": true,
   "devDependencies": {
+    "jsonwebtoken": "^8.5.1",
+    "monk": "^6.0.6",
     "@octopusdeploy/grunt-octo": "0.0.50",
     "grunt": "^1.0.1",
     "grunt-cli": "^1.2.0",
