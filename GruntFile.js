@@ -28,14 +28,6 @@ module.exports = function ( grunt ) {
                 replace: true
             },
             src: [ './pkg/**/*' ]
-        },
-        copy: {
-            config: {
-                expand: true,
-                cwd: 'publish',
-                src: 'web.config',
-                dest: './dist'
-            }
         }
     } );
 
@@ -79,7 +71,7 @@ module.exports = function ( grunt ) {
 
     grunt.registerTask('build', ['clean', 'gitinfo', 'generate_version', 'octo-pack']);
 
-    grunt.registerTask( 'publish', ['copy:config', 'clean', 'gitinfo', 'generate_version', 'octo-pack', 'octo-push']);
+    grunt.registerTask( 'publish', ['clean', 'gitinfo', 'generate_version', 'octo-pack', 'octo-push']);
 
     require( 'load-grunt-tasks' )( grunt );
 };
