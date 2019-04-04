@@ -30,7 +30,7 @@ service_helper.generate_crud_functions = function (collection) {
 
     crud_operations.search = async function (query) {
         try {
-            let results = collection.find(query);
+            let results = await collection.find(query);
             return results;
         }
         catch (err) {
