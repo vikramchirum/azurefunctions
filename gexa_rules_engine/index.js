@@ -58,6 +58,11 @@ module.exports = async function (context, req) {
             body: { Message: "Please pass a valid fact run request." }
         };
     }
+
+    context.res.headers = {
+        'Content-Type': 'application/json'
+    };
+
 };
 
 async function validate_token(context, req) {

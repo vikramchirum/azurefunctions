@@ -32,6 +32,11 @@ module.exports = async function (context, req) {
             body: { Message : "Please pass a partial service request with at least a few fields." }
         };
     }
+
+    context.res.headers = {
+        'Content-Type': 'application/json'
+    };
+
 };
 
 async function validate_token(context, req) {

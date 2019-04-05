@@ -19,6 +19,10 @@ module.exports = async function (context, req) {
     } else if (req.method.toUpperCase() === 'DELETE') {
         await delete_rule_set(context, req);
     }
+
+    context.res.headers = {
+        'Content-Type': 'application/json'
+    };
 };
 
 async function post(context, req) {
@@ -86,14 +90,15 @@ async function patch(context, req) {
 async function get(context, req) {
     try {
 
+        var query= {};
         if (req.query.Type) {
-            req.query.Type = {
+            query.Type = {
                 $regex: req.query.Type,
                 $options: 'i'
             };
         }
 
-        let results = await rules_service.search(req.query);
+        let results = await rules_service.search(query);
         if (results && results.length) {
             context.res = {
                 body: results
